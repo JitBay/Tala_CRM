@@ -3,7 +3,7 @@ crm for Tala Assurance
 
 #Steps
 git clone https://github.com/JitBay/Tala_CRM.git
-cd ForceSales
+cd Tala CRM
 git checkout develop
 pip install -r requirements.txt
 
