@@ -4,9 +4,9 @@
 {% block content %}
 {% if request.user.is_authenticated %}
 <div class="max-w-lg mx-auto">
-    <h1>You are already logged In</h1>
+    <h1>Vous êtes déjà connecté</h1>
     <div class="flex py-5 border-t border-gray-200 mt-5 justify-between">
-        <a class="hover:text-yellow-500 mt-3" href="{% url 'leads:lead_list' %}">Go To Leads</a>
+        <a class="hover:text-yellow-500 mt-3" href="{% url 'leads:lead_list' %}">Aller aux prospects</a>
     </div>
 </div>
 {% else %}
@@ -14,11 +14,11 @@
     <form method="POST">
         {% csrf_token %}
         {{ form|crispy }}
-        <button class="w-full bg-yellow-500 hover:bg-yellow-600 px-3 py-2 rounded-md text-white" type="submit">Sign Up</button>
+        <button class="w-full bg-yellow-500 hover:bg-yellow-600 px-3 py-2 rounded-md text-white" type="submit">S'inscrire</button>
         
     </form>
     <div class="py-5 border-t border-gray-200 mt-5 ">
-        <a class="hover:text-yellow-500 mt-3" href="{% url 'login' %}">Already have an account?</a>
+        <a class="hover:text-yellow-500 mt-3" href="{% url 'login' %}">Vous avez déjà un compte?</a>
     </div>
 </div>
 {% endif %}

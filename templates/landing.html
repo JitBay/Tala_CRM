@@ -2,23 +2,107 @@
 {% load static %}
 
 {% block content %}
+<head>
+  
+  <style>
+  
+    /* CSS */
+    .button-37 {
+      background-color: #13aa52;
+      border: 1px solid #13aa52;
+      border-radius: 4px;
+      box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      outline: none;
+      outline: 0;
+      padding: 10px 25px;
+      text-align: center;
+      transform: translateY(0);
+      transition: transform 150ms, box-shadow 150ms;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      margin: 4px 8px;
+    }
+    
+    .button-37:hover {
+      box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+      transform: translateY(-2px);
+    }
+    
+    @media (min-width: 768px) {
+      .button-37 {
+        padding: 10px 30px;
+      }
+    }
+
+
+    .button-38 {
+      background-color: #277BC0;
+      border: 1px solid #13aa52;
+      border-radius: 4px;
+      box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      outline: none;
+      outline: 0;
+      padding: 10px 25px;
+      text-align: center;
+      transform: translateY(0);
+      transition: transform 150ms, box-shadow 150ms;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      margin: 4px 8px;
+    }
+    
+    .button-38:hover {
+      box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+      transform: translateY(-2px);
+    }
+    
+    @media (min-width: 768px) {
+      .button-38 {
+        padding: 10px 30px;
+      }
+    }
+</style>
+</head>
+
+
 <section class="text-gray-600 body-font">
     <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-      <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="{% static 'images/banner.png' %}">
+      <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="{% static 'images/banner3.png' %}">
       <div class="text-center lg:w-2/3 w-full">
-        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">ForceSales CRM</h1>
-        <p class="mb-8 leading-relaxed">Manage Leads and Force some Sales</p>
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">TALA Prospect Manager</h1>
         <div class="flex justify-center">
-          <a href="{% url 'login' %}"><button class="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">
+          <a href="{% url 'login' %}"><button class="button-37">
             {% if user.is_authenticated %}
-              Leads List
+              List des Prospects
             {% else %}
-              Login
+              Connecter
             {% endif %}
           </button></a>
-          <a href="{% url 'about' %}"><button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">About</button></a>
+          <a href="/admin/">
+            <button class="button-38" role="button">Panneau d'Administration</button>
+        </a>
+          <a href="{% url 'about' %}"><button class="button-37">Sur Nous</button></a>
+          
         </div>
       </div>
+      
     </div>
+    
   </section>
 {% endblock content %}
+
+

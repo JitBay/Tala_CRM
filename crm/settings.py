@@ -36,12 +36,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
 
     # third party
     'crispy_forms',
@@ -141,14 +143,19 @@ STATIC_ROOT = "static_root"
 
 AUTH_USER_MODEL = 'leads.User'
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+#EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+
+
+
+
 
 LOGIN_REDIRECT_URL = '/leads'
 LOGIN_URL = "/login"
 LOGOUT_REDIRECT_URL = "/"
 
-# for production
-# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
 
 CRISPY_TEMPLATE_PACK = 'tailwind'
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'tailwind'

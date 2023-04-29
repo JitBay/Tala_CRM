@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views #new
 from django.contrib.auth.views import (
     LoginView,
     LogoutView,
@@ -14,6 +15,7 @@ from django.contrib.auth.views import (
 
 
 urlpatterns = [
+    path('admin/login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
     path('admin/', admin.site.urls),
     path('', LandingPageView.as_view(), name='landing-page'),
     path('about/', AboutPageView.as_view(), name='about'),

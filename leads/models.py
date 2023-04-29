@@ -19,7 +19,7 @@ class Lead(models.Model):
 
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
-    age = models.IntegerField(default=0)
+    contact = models.CharField(max_length=20,default='')
     organization = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     # put null to all leads when agent is deleted
     agent = models.ForeignKey(
@@ -30,6 +30,10 @@ class Lead(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
     phone_number = models.CharField(max_length=20)
     email = models.EmailField()
+
+    class Meta:
+        verbose_name = "Prospect"
+        verbose_name_plural = "Prospect"
 
     def __str__(self) -> str:
         return f"{self.first_name} {self.last_name}"
@@ -47,6 +51,9 @@ class Category(models.Model):
     name = models.CharField(max_length=30)
     organization = models.ForeignKey(
         UserProfile, on_delete=models.CASCADE)
+    class Meta:
+        verbose_name = "Categories"
+        verbose_name_plural = "Categories"
 
     def __str__(self) -> str:
         return self.name

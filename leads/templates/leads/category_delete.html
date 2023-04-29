@@ -3,7 +3,7 @@
     {% block content %}
 
     <div class="max-w-lg mx-auto">
-            <h2 class="text-xl font-medium font-mono">Are you sure you want to delete the category <i>'{{ object.name }}'</i> ?</h2>
+            <h2 class="text-xl font-medium font-mono">Êtes vous sur de supprimer la categorie <i>'{{ object.name }}'</i> ?</h2>
         <form method="POST">
             {% csrf_token %}
             {{ form.crispy }}
@@ -11,7 +11,7 @@
         </form>
 
         <div class="mt-5 py-5 border-t border-gray-200">
-            <a href="{% url 'leads:category_list' %}" class="hover:text-yellow-500 mt-3">Go Back To categories</a>
+            <a href="{% url 'leads:category_list' %}" class="hover:text-yellow-500 mt-3">Revenir vers le catalogue</a>
         </div>
     </div>
 

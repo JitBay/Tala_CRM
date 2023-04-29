@@ -6,3 +6,7 @@ admin.site.register(Category)
 admin.site.register(UserProfile)
 admin.site.register(User)
 admin.site.register(Agent)
+
+admin.site.site_header = 'TALA Administration'
+
+admin.site.index_title = "TALA Administration"

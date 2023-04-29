@@ -13,9 +13,8 @@ class LeadModelForm(forms.ModelForm):
         fields = (
             'first_name',
             'last_name',
-            'age',
+            'contact',
             'agent',
-            'description',
             'category',
             'phone_number',
             'email'
